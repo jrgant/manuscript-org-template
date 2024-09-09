@@ -34,3 +34,7 @@ The Makefile provides a few job options for exporting the org file:
 | =timestamp-draft= | Timestamp the current manuscript as a draft (saved to =_drafts=) |
 | =timestamp-final= | Timestamp the current manuscript as a final (saved to =_final=)  |
 | =cleantex=        | Remove auxiliary files created during export to TeX            |
+
+** License
+
+The CC0 license used here applies only to files I've written myself. CSL files and Lua Pandoc filters retain their original license.
