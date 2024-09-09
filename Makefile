@@ -1,10 +1,10 @@
 export DATE=$$(date +%Y-%m-%d-%H%M)
 
 draft:
-	TYPE=draft ./_scripts/tex2docx_pandoc.sh
+	TYPE=draft ./_scripts/org2output.sh
 
 final:
-	./_scripts/tex2docx_pandoc.sh
+	./_scripts/org2output.sh
 
 timestamp-draft:
 	TYPE=draft cp manuscript_draft.docx _drafts/manuscript_DRAFT_$(DATE).docx
