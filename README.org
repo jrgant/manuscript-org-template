@@ -17,23 +17,23 @@ The basic format pipeline is =org → tex → docx → pdf=.
 
 The =_scripts= directory contains two scripts: a Doom CLI script (=export-to-latex.el=) and a shell script (=org2output.sh=) that calls the former, along with other utilities to handle the full conversion pipeline.
 
-| Conversion  | Utility                         |
-|-------------+---------------------------------|
+| Conversion    | Utility                           |
+|---------------+-----------------------------------|
 | =org → tex=  | Emacs =org-latex-export-to-latex= |
-| =tex → docx= | Pandoc                          |
-| =docx → pdf= | LibreOffice                     |
+| =tex → docx= | Pandoc                            |
+| =docx → pdf= | LibreOffice                       |
 
 The =_styles= directory contains Citation Style Language (CSL) files for reference formatting, as well as =docx= files used by Pandoc as style references. The "draft" reference file includes a header with my name and a DRAFT watermark.
 
 The Makefile provides a few job options for exporting the org file:
 
-| Job             | Description                                                    |
-|-----------------+----------------------------------------------------------------|
-| =draft=           | Create a draft document                                        |
-| =final=           | Create a "final" (unwatermarked) document                      |
+| Job               | Description                                                      |
+|-------------------+------------------------------------------------------------------|
+| =draft=           | Create a draft document                                          |
+| =final=           | Create a "final" (unwatermarked) document                        |
 | =timestamp-draft= | Timestamp the current manuscript as a draft (saved to =_drafts=) |
 | =timestamp-final= | Timestamp the current manuscript as a final (saved to =_final=)  |
-| =cleantex=        | Remove auxiliary files created during export to TeX            |
+| =cleantex=        | Remove auxiliary files created during export to TeX              |
 
 ** License
 
