@@ -35,6 +35,8 @@ The Makefile provides job options for exporting the =org= file and organizing dr
 | =timestamp-final= | Timestamp the current manuscript as a final (saved to =_final=)  |
 | =cleantex=        | Remove auxiliary files created during export to TeX              |
 
+The =timestamp-*= jobs add a UTC timestamp to the filename. I use a datetime stamp as a versioning system because the stamp is unique /and/ sortable chronologically. However, timestamps could be de-synchronized when moving between time zones if the system clock doesn't update properly.
+
 ** License
 
 The CC0 license used here applies only to files I've written myself. CSL files and Lua Pandoc filters retain their original license.
