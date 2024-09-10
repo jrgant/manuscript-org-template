@@ -1,4 +1,4 @@
-export DATE=$$(date +%Y-%m-%d-%H%M)
+export DATE=$$(date +%Y-%m-%d-%H%M-%Z --utc)
 
 draft:
 	TYPE=draft ./_scripts/org2output.sh
