@@ -11,11 +11,11 @@ A personal repo for manuscript and grant writing in Org Mode. Used on Kubuntu 22
 
 ** Overview
 
-I'm trying to solve the problem of wanting to write in Org Mode while needing to collaborate in document formats that people actually use. Right now, I am happy to have a pipeline that mostly solves the conversion problem.
+I'm trying to solve the problem of wanting to write in Org Mode while needing to collaborate in document formats that people actually use. Right now, I am happy to have a pipeline that (mostly) solves the conversion and collaboration problem.
 
 The basic format pipeline is =org → tex → docx → pdf=.
 
-The =_scripts= directory contains two scripts: a Doom CLI script (=export-to-latex.el=) and a shell script (=org2output.sh=) that calls the former, along with other utilities to handle the full conversion pipeline.
+The =_scripts= directory contains two scripts: a Doom CLI script (=export-to-latex.el=) and a shell script (=org2output.sh=) that calls the former and handles the rest of the conversion pipeline.
 
 | Conversion    | Utility                           |
 |---------------+-----------------------------------|
@@ -25,12 +25,12 @@ The =_scripts= directory contains two scripts: a Doom CLI script (=export-to-lat
 
 The =_styles= directory contains Citation Style Language (CSL) files for reference formatting, as well as =docx= files used by Pandoc as style references. The "draft" reference file includes a header with my name and a DRAFT watermark.
 
-The Makefile provides a few job options for exporting the org file:
+The Makefile provides job options for exporting the org file:
 
 | Job               | Description                                                      |
 |-------------------+------------------------------------------------------------------|
-| =draft=           | Create a draft document                                          |
-| =final=           | Create a "final" (unwatermarked) document                        |
+| =draft=           | Create a watermarked draft document                              |
+| =final=           | Create a clean (unwatermarked) document                          |
 | =timestamp-draft= | Timestamp the current manuscript as a draft (saved to =_drafts=) |
 | =timestamp-final= | Timestamp the current manuscript as a final (saved to =_final=)  |
 | =cleantex=        | Remove auxiliary files created during export to TeX              |
