@@ -7,8 +7,8 @@ final:
 	./_scripts/org2output.sh
 
 timestamp-draft:
-	TYPE=draft cp manuscript_draft.docx _drafts/manuscript_DRAFT_$(DATE).docx
-	TYPE=draft cp manuscript_draft.pdf _drafts/manuscript_DRAFT_$(DATE).pdf
+	cp manuscript.docx _drafts/manuscript_DRAFT_$(DATE).docx
+	cp manuscript.pdf _drafts/manuscript_DRAFT_$(DATE).pdf
 
 timestamp-final:
 	cp manuscript.docx _final/manuscript_$(DATE).docx
